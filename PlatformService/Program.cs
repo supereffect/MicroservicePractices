@@ -6,13 +6,22 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(opt =>
-opt.UseInMemoryDatabase("InMem"));
+    opt.UseInMemoryDatabase("InMem"));
+
+builder.Services.AddScoped<IPlatformRepo, PlatformRepo>();
+
+
+
+builder.Services.AddControllers();
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+PreopDb.PreopPopulation(app);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -28,3 +37,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+

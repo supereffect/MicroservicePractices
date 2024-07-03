@@ -1,102 +1,150 @@
-TR
-Mikroservis Demo Projesi
+# Mikroservic Demo Projesi
+
 Bu proje, microservis mimarisini işleyen bir demo projesidir. Proje kapsamında RabbitMQ, Docker, Kubernetes, gRPC ve mimariler hakkında çeşitli örnekler bulabilirsiniz.
 
-İçindekiler
-Kurulum
-Kullanım
-Özellikler
-Katkıda Bulunma
-Lisans
-Kurulum
-Gereksinimler
-Docker
-Kubernetes
-RabbitMQ
-gRPC
-Adımlar
-Bu repoyu klonlayın:
+## İçindekiler
 
-git clone https://github.com/kullanici/demo-projesi.git
-cd demo-projesi
-Docker konteynerlerini başlatın:
+- [Kurulum](#kurulum)
+- [Kullanım](#kullanım)
+- [Özellikler](#özellikler)
+- [Katkıda Bulunma](#katkıda-bulunma)
+- [Lisans](#lisans)
 
-docker-compose up -d
-Kubernetes cluster'ını konfigüre edin ve deploy edin:
+## Kurulum
 
-kubectl apply -f k8s/
-Kullanım
+### Gereksinimler
+
+- [Docker](https://www.docker.com/)
+- [Kubernetes](https://kubernetes.io/)
+- [RabbitMQ](https://www.rabbitmq.com/)
+- [gRPC](https://grpc.io/)
+
+### Adımlar
+
+1. Bu repoyu klonlayın:
+    ```bash
+    git clone https://github.com/kullanici/demo-projesi.git
+    cd demo-projesi
+    ```
+
+2. Docker konteynerlerini başlatın:
+    ```bash
+    docker-compose up -d
+    ```
+
+3. Kubernetes cluster'ını konfigüre edin ve deploy edin:
+    ```bash
+    kubectl apply -f k8s/
+    ```
+
+## Kullanım
+
 Proje içerisindeki örnekleri çalıştırmak ve incelemek için aşağıdaki adımları takip edebilirsiniz:
 
-RabbitMQ kullanarak mesaj kuyruğunu başlatın:
+1. RabbitMQ kullanarak mesaj kuyruğunu başlatın:
+    ```bash
+    docker-compose up rabbitmq
+    ```
 
-docker-compose up rabbitmq
-gRPC servislerini çalıştırın:
+2. gRPC servislerini çalıştırın:
+    ```bash
+    go run grpc_server/main.go
+    ```
 
-go run grpc_server/main.go
-Kubernetes üzerinde deploy edilen servislerin durumunu kontrol edin:
+3. Kubernetes üzerinde deploy edilen servislerin durumunu kontrol edin:
+    ```bash
+    kubectl get pods
+    ```
 
-kubectl get pods
-Özellikler
-Microservis mimarisi
-RabbitMQ ile mesaj kuyruğu yönetimi
-Docker konteynerizasyonu
-Kubernetes ile ölçeklenebilir dağıtım
-gRPC ile yüksek performanslı servisler
-Katkıda Bulunma
-Katkıda bulunmak isterseniz, lütfen bir issue açın veya bir pull request gönderin. Her türlü katkı değerlidir!
+## Özellikler
 
-Lisans
-Bu proje MIT Lisansı ile lisanslanmıştır.
+- Microservis mimarisi
+- RabbitMQ ile mesaj kuyruğu yönetimi
+- Docker konteynerizasyonu
+- Kubernetes ile ölçeklenebilir dağıtım
+- gRPC ile yüksek performanslı servisler
 
-EN
-Microservice Demo Project
+## Katkıda Bulunma
+
+Katkıda bulunmak isterseniz, lütfen bir `issue` açın veya bir `pull request` gönderin. Her türlü katkı değerlidir!
+
+## Lisans
+
+Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
+
+
+# En
+# Microservice Demo Project
+
 This project is a demo project that explores microservice architecture. In this project, you can find various examples of RabbitMQ, Docker, Kubernetes, gRPC, and architectures.
 
-Table of Contents
-Installation
-Usage
-Features
-Contributing
-License
-Installation
-Requirements
-Docker
-Kubernetes
-RabbitMQ
-gRPC
-Steps
-Clone this repository:
+## Table of Contents
 
-git clone https://github.com/username/demo-project.git
-cd demo-project
-Start the Docker containers:
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Contributing](#contributing)
+- [License](#license)
 
-docker-compose up -d
-Configure and deploy the Kubernetes cluster:
+## Installation
 
-kubectl apply -f k8s/
-Usage
+### Requirements
+
+- [Docker](https://www.docker.com/)
+- [Kubernetes](https://kubernetes.io/)
+- [RabbitMQ](https://www.rabbitmq.com/)
+- [gRPC](https://grpc.io/)
+
+### Steps
+
+1. Clone this repository:
+    ```bash
+    git clone https://github.com/username/demo-project.git
+    cd demo-project
+    ```
+
+2. Start the Docker containers:
+    ```bash
+    docker-compose up -d
+    ```
+
+3. Configure and deploy the Kubernetes cluster:
+    ```bash
+    kubectl apply -f k8s/
+    ```
+
+## Usage
+
 To run and examine the examples within the project, follow these steps:
 
-Start the message queue using RabbitMQ:
+1. Start the message queue using RabbitMQ:
+    ```bash
+    docker-compose up rabbitmq
+    ```
 
-docker-compose up rabbitmq
-Run the gRPC services:
+2. Run the gRPC services:
+    ```bash
+    go run grpc_server/main.go
+    ```
 
-go run grpc_server/main.go
-Check the status of the services deployed on Kubernetes:
+3. Check the status of the services deployed on Kubernetes:
+    ```bash
+    kubectl get pods
+    ```
 
-kubectl get pods
-Features
-Microservice architecture
-Message queue management with RabbitMQ
-Docker containerization
-Scalable deployment with Kubernetes
-High-performance services with gRPC
-Contributing
-If you want to contribute, please open an issue or send a pull request. All contributions are welcome!
+## Features
 
-License
-This project is licensed under the MIT License.
+- Microservice architecture
+- Message queue management with RabbitMQ
+- Docker containerization
+- Scalable deployment with Kubernetes
+- High-performance services with gRPC
+
+## Contributing
+
+If you want to contribute, please open an `issue` or send a `pull request`. All contributions are welcome!
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
 

@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "6d779dc6-1534-49d2-ab39-4d9f25c9d20a",
+		"name": "Local",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25246100",
+		"_collection_link": "https://baylanrd.postman.co/workspace/BMS~fadd1b9c-8a00-40bc-8d7c-08f3b3116d05/collection/25246100-6d779dc6-1534-49d2-ab39-4d9f25c9d20a?action=share&source=collection_link&creator=25246100"
+	},
+	"item": [
+		{
+			"name": "Commands Service",
+			"item": [
+				{
+					"name": "Test Inbound Connection",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5197/api/c/platforms/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5197",
+							"path": [
+								"api",
+								"c",
+								"platforms",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "K8S",
+			"item": [
+				{
+					"name": "Platform Service (Node Port)",
+					"item": [
+						{
+							"name": "Create Platform",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n        \r\n        \"name\": \"Doasdfstnet\",\r\n        \"publisher\": \"Micrasdfosoft\",\r\n        \"cost\": \" Freasdfe\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:30644/api/platforms/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "30644",
+									"path": [
+										"api",
+										"platforms",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Platforms",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:30644/api/platforms",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "30644",
+									"path": [
+										"api",
+										"platforms"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Platform Service (Nginx)",
+					"item": [
+						{
+							"name": "Get All Platforms",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://acme.com/api/platforms",
+									"protocol": "http",
+									"host": [
+										"acme",
+										"com"
+									],
+									"path": [
+										"api",
+										"platforms"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Docker Env",
+			"item": [
+				{
+					"name": "Platform Service",
+					"item": [
+						{
+							"name": "Get All Platforms",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/platforms",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"platforms"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Platform Service",
+			"item": [
+				{
+					"name": "Get All Platforms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5227/api/platforms",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5227",
+							"path": [
+								"api",
+								"platforms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Individual Platform",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5227/api/platforms/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5227",
+							"path": [
+								"api",
+								"platforms",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Platform",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \r\n        \"name\": \"Doasdfstnet\",\r\n        \"publisher\": \"Micrasdfosoft\",\r\n        \"cost\": \" Freasdfe\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5227/api/platforms/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5227",
+							"path": [
+								"api",
+								"platforms",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Microservice Arc. Demo Project Req collection"
+		}
+	]
+}

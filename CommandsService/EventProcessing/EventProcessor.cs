@@ -20,13 +20,12 @@ namespace CommandsService.EventProcessing
         }
         void IEventProcessor.ProcessEvent(string message)
         {
-
             var eventType = DetermineEvent(message);
 
             switch (eventType)
             {
                 case EventType.PlatformPublished:
-
+                    addPlatform(message);
                     break;
                 default:
                     break;
@@ -67,12 +66,15 @@ namespace CommandsService.EventProcessing
                     if (!repo.ExternalPlatformExists(plat.ExternalId))
                     {
                         repo.CreatePlatform(plat);
-                        repo.SaveChanges();
+                        if (repo.SaveChanges())
+                            Console.WriteLine("--> Platform added");
+
+
                     }
                     else
                     {
                         Console.WriteLine("--> Platform already exists!");
-                     }
+                    }
                 }
                 catch (Exception ex)
                 {

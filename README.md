@@ -58,11 +58,11 @@ Proje içerisindeki örnekleri çalıştırmak ve incelemek için aşağıdaki a
 
 ## Özellikler
 
-- Microservis mimarisi
-- RabbitMQ ile mesaj kuyruğu yönetimi
-- Docker konteynerizasyonu
-- Kubernetes ile ölçeklenebilir dağıtım
-- gRPC ile yüksek performanslı servisler
+- Microservis mimarisi(Tamamlandı)
+- RabbitMQ ile mesaj kuyruğu yönetimi(Tamamlandı)
+- Docker konteynerizasyonu(Tamamlandı)
+- Kubernetes ile ölçeklenebilir dağıtım(Tamamlandı)
+- gRPC ile yüksek performanslı servisler(Geliyor)
 
 ## Katkıda Bulunma
 
@@ -134,11 +134,11 @@ To run and examine the examples within the project, follow these steps:
 
 ## Features
 
-- Microservice architecture
-- Message queue management with RabbitMQ
-- Docker containerization
-- Scalable deployment with Kubernetes
-- High-performance services with gRPC
+- Microservice architecture(Completed)
+- Message queue management with RabbitMQ(Completed)
+- Docker containerization(Completed)
+- Scalable deployment with Kubernetes(Completed)
+- High-performance services with gRPC(Coming soon)
 
 ## Contributing
 

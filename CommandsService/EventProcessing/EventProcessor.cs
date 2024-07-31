@@ -71,12 +71,12 @@ namespace CommandsService.EventProcessing
                     }
                     else
                     {
-                        Console.WriteLine("--> Platform already exists!")
+                        Console.WriteLine("--> Platform already exists!");
                      }
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"--> Could not add Platform to DB {ex.Message}")
+                    Console.WriteLine($"--> Could not add Platform to DB {ex.Message}");
                 }
             }
         }

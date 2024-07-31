@@ -31,6 +31,109 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Get all Platforms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5197/api/c/platforms/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5197",
+							"path": [
+								"api",
+								"c",
+								"platforms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Commands For Platform",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5197/api/c/platforms/111/commands/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5197",
+							"path": [
+								"api",
+								"c",
+								"platforms",
+								"111",
+								"commands",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Command For Platform",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5197/api/c/platforms/1/commands/3/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5197",
+							"path": [
+								"api",
+								"c",
+								"platforms",
+								"1",
+								"commands",
+								"3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Command for Platform",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"HowTo\" :\"Build a .net project\",\r\n    \"CommandLine\":\"dotnet build\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5197/api/c/platforms/11/commands",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5197",
+							"path": [
+								"api",
+								"c",
+								"platforms",
+								"11",
+								"commands"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -110,6 +213,118 @@
 									"path": [
 										"api",
 										"platforms"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Platform",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n        \r\n        \"name\": \"Ulu Egehan Ç \",\r\n        \"publisher\": \"Çakır family\",\r\n        \"cost\": \" 28 year\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://acme.com/api/platforms",
+									"protocol": "http",
+									"host": [
+										"acme",
+										"com"
+									],
+									"path": [
+										"api",
+										"platforms"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Commands Service (Nginx)",
+					"item": [
+						{
+							"name": "Get all Platforms",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://acme.com/api/c/platforms/",
+									"protocol": "http",
+									"host": [
+										"acme",
+										"com"
+									],
+									"path": [
+										"api",
+										"c",
+										"platforms",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Command for Platform Copy",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"HowTo\" :\"Build a .net project\",\r\n    \"CommandLine\":\"dotnet build\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://acme.com/api/c/platforms/ 7/commands",
+									"protocol": "http",
+									"host": [
+										"acme",
+										"com"
+									],
+									"path": [
+										"api",
+										"c",
+										"platforms",
+										" 7",
+										"commands"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all Commands For Platform Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5197/api/c/platforms/111/commands/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5197",
+									"path": [
+										"api",
+										"c",
+										"platforms",
+										"111",
+										"commands",
+										""
 									]
 								}
 							},

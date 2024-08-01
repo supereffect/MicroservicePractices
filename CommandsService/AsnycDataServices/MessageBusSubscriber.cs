@@ -46,7 +46,7 @@ namespace CommandsService.AsyncDataServices
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"--> Couldn't connect message bus: {ex.Message}");
+                Console.WriteLine($"--> Couldn't connect message bus:{_configuration["RabbitMQHost"]} - > {ex.Message}");
             }
         }
         protected override Task ExecuteAsync(CancellationToken stoppingToken)

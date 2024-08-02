@@ -46,7 +46,7 @@
             },
             "Grpc.AspNetCore": {
               "target": "Package",
-              "version": "[2.65.0, )"
+              "version": "[2.62.0, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",

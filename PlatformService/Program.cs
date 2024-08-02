@@ -24,7 +24,7 @@ else
 builder.Services.AddScoped<IPlatformRepo, PlatformRepo>();
 builder.Services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
 builder.Services.AddSingleton<IMessageBusClient,MessageBusClient>();    
-
+builder.Services.AddGrpc();
 builder.Services.AddControllers();
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
